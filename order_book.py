@@ -60,6 +60,7 @@ class OrderBook:
                 break
 
     def _validate_order(self, order):
+        """Validate an incoming order's side and unique ID."""
         if order.side not in ("BUY", "SELL"):
             raise ValueError("Invalid side")
 
